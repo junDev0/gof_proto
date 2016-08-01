@@ -3,10 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Browse</title>
+	<title>GoF</title>
+	<link rel="stylesheet" href="login.css" />
 </head>
 <body>
-		
-	<a href="account.jsp">계정으로</a> 
-</body>
-</html>
