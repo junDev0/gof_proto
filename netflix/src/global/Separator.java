@@ -31,7 +31,7 @@ public class Separator {
 			list.add((String) en.nextElement());
 		}
 		String action = list.contains("action") ? request.getParameter("action") : "move";
-		String page = list.contains("page") ? request.getParameter("page") : "main";
+		String page = list.contains("page") ? request.getParameter("page") : "index";
 		String pageNo = list.contains("pageNo")? request.getParameter("pageNo") : "1";
 		String keyword = list.contains("keyword")? request.getParameter("keyword") : "lostChild";
 		
