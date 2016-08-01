@@ -6,6 +6,7 @@
      <option value="browsehome">홈</option>
      <option value="myvideo">내 동영상 목록</option>
      <option value="newvideo">신규 동영상</option>
+     <option value="popvideo">인기 동영상</option>
 	</select>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 		&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 		<input type="submit" value="검색" />
