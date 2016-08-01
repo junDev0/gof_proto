@@ -10,6 +10,9 @@ public class PaymentBean {
 	public void setPaySeq(int paySeq) {
 		this.paySeq = paySeq;
 	}
+	public void setPaySeq(String paySeq) {
+		this.paySeq = Integer.parseInt(paySeq);
+	}
 	public int getPrice() {
 		return price;
 	}
@@ -39,5 +42,10 @@ public class PaymentBean {
 	}
 	public void setExpireDate(String expireDate) {
 		this.expireDate = expireDate;
+	}
+	@Override
+	public String toString() {
+		return "PaymentBean [paySeq=" + paySeq + ", price=" + price + ", cardNum=" + cardNum + ", company=" + company
+				+ ", payDate=" + payDate + ", expireDate=" + expireDate + "]\n";
 	}
 }

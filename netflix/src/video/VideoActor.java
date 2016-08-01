@@ -1,7 +1,5 @@
 package video;
 
-import global.VideoBean;
-
 /**
  * @date   :2016. 7. 27.
  * @author :HyunWoo Lee

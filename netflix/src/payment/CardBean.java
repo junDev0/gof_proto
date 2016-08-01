@@ -1,8 +1,9 @@
 package payment;
 
 public class CardBean {
-	private String cardNum,vYear,vMonth,name;
+	private String cardNum,vYear,vMonth,name,company;
 	private int birth;
+	
 	public String getCardNum() {
 		return cardNum;
 	}
@@ -32,6 +33,12 @@ public class CardBean {
 	}
 	public void setBirth(int birth) {
 		this.birth = birth;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
 	}
 	
 }

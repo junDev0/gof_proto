@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * 
  */
@@ -8,6 +9,10 @@ package payment;
  * @date: Aug 1, 2016
  * @file: MemberPaymentCard.java
  */
+=======
+package payment;
+
+>>>>>>> refs/remotes/master/hyunwoo
 public class MemberPaymentCard {
 	private int paySeq,price,birth,grade;
 	private String email,cardNum,name,company,payDate,expireDate,phone;

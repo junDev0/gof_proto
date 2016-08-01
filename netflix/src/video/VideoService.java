@@ -3,7 +3,6 @@ package video;
 import java.util.List;
 
 import global.CommonService;
-import global.VideoBean;
 
 /**
  * @date   :2016. 7. 27.
@@ -13,6 +12,11 @@ import global.VideoBean;
 */
 
 public interface VideoService extends CommonService {
+	
+	public int insert(VideoBean viBean);
+	public int update(VideoBean viBean);
+	public int delete(VideoBean viBean);
+	
 	// main 
 	public List<VideoBean> myMovieList(String email);
 	public List<VideoBean> wishMovieList(String email);

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import payment.MemberPaymentCard;
+<<<<<<< HEAD
 
 /**
  * @author: jchoi
@@ -72,6 +73,81 @@ public class MemberServiceImpl implements MemberService {
 		if (dao.update(pcmBean)==1) {
 			System.out.println("Update success from DAO");
 			result = 1;
+=======
+import payment.PaymentDAO;
+
+/**
+ * @author: jchoi
+ * @date: Aug 1, 2016
+ * @file: MemberServiceImpl.java
+ */
+public class MemberServiceImpl implements MemberService {
+
+	private static MemberServiceImpl instance = new MemberServiceImpl();
+	private MemberDAO dao = MemberDAO.getInstance();
+	private PaymentDAO pDao = PaymentDAO.getInstance();
+	
+	private MemberServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static MemberServiceImpl getInstance() {
+		return instance;
+	}
+
+	@Override
+	public List<MemberBean> list() {
+		return dao.selectAll();
+	}
+	
+	@Override
+	public List<MemberBean> findBy(String keyword) { // keyword=columname:keyword 
+		String[] format = keyword.split(":");
+		return dao.findBy(format[0],format[1]);
+	}
+	@Override
+	public Map<?, ?> map() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MemberBean findByPk(String email) {
+		return dao.findByPk(email);
+	}
+
+	@Override
+	public int regist(MemberBean memBean) {
+		int result = 0;
+		if (dao.insert(memBean)==1) {
+			System.out.println("Registration success from DAO");
+			result = 1;
+		} else{
+			System.out.println("Registration failed from DAO");
+		}
+		return result;
+	}
+	
+	@Override
+	public MemberBean login(String email, String password) {
+		MemberBean loginBean = dao.findByPk(email);
+		if (loginBean!=null && loginBean.getPassword().equals(password)) {
+			System.out.println("Login success from DAO");
+		} else {
+			System.out.println("Login failed from DAO");
+		}
+		return loginBean;
+	}
+
+	@Override
+	public int update(MemberPaymentCard pcmBean) {
+		int result = 0;
+		if (dao.update(pcmBean)==1) {
+			if(pDao.insert(pcmBean)==1){
+				System.out.println("Update success from DAO");
+				result = 1;
+			}
+>>>>>>> refs/remotes/master/hyunwoo
 		} else {
 			System.out.println("Update failed from DAO");
 		}
