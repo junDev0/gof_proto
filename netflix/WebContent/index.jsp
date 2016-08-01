@@ -10,5 +10,7 @@
 		
 	<a href="account.jsp">계정으로</a> 
 
+	<a href="browse_main.jsp">로그인 메인으로</a> 
+
 </body>
 </html>

@@ -24,6 +24,7 @@
   </tr>
   </c:forEach>
 </table>
+<input type="submit" onclick=" location='account.jsp'" value="확인" />
 </div>		
 <jsp:include page="login_footer.jsp" />
 <jsp:include page="login_end.jsp" /> 
