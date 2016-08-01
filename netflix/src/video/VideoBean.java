@@ -8,9 +8,9 @@ package video;
 */
 
 public class VideoBean {
-	private int serialNo,grade,season,episode,groupNo;
+	private int serialNo,grade,season,episode,groupNo,producer_no,category,genre;
 	private String title,subTitle,createYear,s​ynopsis,runningTime,
-			category,genre,producer,file,language,regDate,poster;
+			file,language,regDate,poster;
 	//grade point average
 	public int getSerialNo() {
 		return serialNo;
@@ -47,24 +47,6 @@ public class VideoBean {
 	}
 	public void setRunningTime(String runningTime) {
 		this.runningTime = runningTime;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
-	public String getGenre() {
-		return genre;
-	}
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
-	public String getProducer() {
-		return producer;
-	}
-	public void setProducer(String producer) {
-		this.producer = producer;
 	}
 	public String getFile() {
 		return file;
@@ -114,5 +96,24 @@ public class VideoBean {
 	public void setSubTitle(String subTitle) {
 		this.subTitle = subTitle;
 	}
+	public int getProducer_no() {
+		return producer_no;
+	}
+	public void setProducer_no(int producer_no) {
+		this.producer_no = producer_no;
+	}
+	public int getCategory() {
+		return category;
+	}
+	public void setCategory(int category) {
+		this.category = category;
+	}
+	public int getGenre() {
+		return genre;
+	}
+	public void setGenre(int genre) {
+		this.genre = genre;
+	}
+	
 	
 }

@@ -65,8 +65,17 @@ public class VideoServiceImpl implements VideoService{
 	}
 	@Override
 	public int insert(VideoBean viBean) {
-		
-		return vDao.insert(viBean);
+		int result = 0;
+		if(vDao.insert(viBean)==1){
+			vDao.insertProducing(viBean); // produder dao로 교체 예정
+			vDao.insertGenre(viBean);
+			vDao.insertCategory(viBean);
+			vDao.insertGroupNo(viBean);
+			vDao.insertGrade(viBean);
+			vDao.insertSeries(viBean);
+			//vDao.insertAppear(); // action Dao로 교체 예정 actor+video bean 
+		}
+		return result;
 	}
 	@Override
 	public int update(VideoBean viBean) {

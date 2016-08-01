@@ -51,6 +51,7 @@ create table video(
 )
 
 
+
 ----------------------- producer  -----------------------비디오 쪼개는 중
 create sequence producer_seq;
 
@@ -60,7 +61,7 @@ create table producer(
 	eng_name varchar2(30),
 	profile_img varchar2(100)	
 )
-select * from producer;
+
 ----------------------- producing  -----------------------
 
 create table producing(
@@ -81,6 +82,7 @@ insert into category values(2);
 insert into category values(3);
 insert into category values(4);
 insert into category values(5);
+
 
 
 create table category_video(
@@ -114,6 +116,7 @@ create table genre_video(
 )
 ----------------------- group no  -----------------------
 
+
 create table group_no(
 	group_no number(3),
 	serial_no int,
@@ -126,6 +129,7 @@ create table group_no(
 create table grade(
 	grade number(2) primary key
 )
+
 create table grade_video(
 	grade number(2),
 	serial_no int,
@@ -143,7 +147,6 @@ create table SERIES(
 	constraint FK_DRAMA_SN foreign key(serial_no)
 	references video(serial_no) on delete cascade
 )
-
 ----------------------- appearance -----------------------배우가 출연한 영화 같은거 구할떄 사용, 출연 테이블 
 
 create table appearance(
@@ -155,6 +158,8 @@ create table appearance(
 	constraint FK_APPEARANCE_SERIAL_NO foreign key(serial_no)
 	references video(serial_no) on delete cascade
 )
+
+
 ----------------------- Customer ----------------------- 고객센터 q&a
 	
 create sequence customer_seq
@@ -214,3 +219,7 @@ create table bookmark(
 	references video(serial_no) on delete cascade
 )
 
+
+
+select * from video join producing using(serial_no) join category_video using(serial_no)
+join genre_video using(serial_no) join group_no using(serial_no) join grade_video using(serial_no) left outer join series using(serial_no)

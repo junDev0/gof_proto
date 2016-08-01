@@ -3,7 +3,6 @@ package payment;
 import java.util.List;
 import java.util.Map;
 
-import member.MemberDAO;
 
 public class PaymentServiceImpl implements PaymentService{
 	private PaymentDAO pDao = PaymentDAO.getInstance();
