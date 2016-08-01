@@ -1,9 +1,13 @@
 package member;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MemberBean {
-	private String name,email,password,grade,phone
-				  ,regDate,birth,profImg,cardNum;
+	private String name,email,password,phone,regDate,birth,profImg,cardNum, fav;
+
 	private boolean isRcvEmail;
+	private int grade;
 	public String getName() {
 		return name;
 	}
@@ -22,11 +26,11 @@ public class MemberBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getGrade() {
+	public int getGrade() {
 		return grade;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public void setGrade(int i) {
+		this.grade = i;
 	}
 	public String getPhone() {
 		return phone;
@@ -38,6 +42,7 @@ public class MemberBean {
 		return regDate;
 	}
 	public void setRegDate(String regDate) {
+		regDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date(System.currentTimeMillis()));
 		this.regDate = regDate;
 	}
 	public String getBirth() {
@@ -59,9 +64,35 @@ public class MemberBean {
 		this.cardNum = cardNum;
 	}
 	public boolean isRcvEmail() {
+		//??
+		
 		return isRcvEmail;
 	}
 	public void setRcvEmail(boolean isRcvEmail) {
 		this.isRcvEmail = isRcvEmail;
 	}
+	
+	public String getFav() {
+		return fav;
+	}
+
+	public void setFav(String fav) {
+		this.fav = fav;
+	}
+
+	@Override
+	public String toString() {
+		return "MemberBean "
+				+ "\n Name: " + name + ""
+				+ "\n Email: " + email + ""
+				+ "\n Password: " + password + ""
+				+ "\n Phone: " + phone
+				+ "\n RegDate: " + regDate + ""
+				+ "\n Date of Birth: " + birth + ""
+				+ "\n Profile Image: " + profImg + ""
+				+ "\n Card Num: " + cardNum 
+				+ "\n Receive Email(Subscription Y/N): " + isRcvEmail + ""
+				+ "\n Grade: " + grade;
+	}
+
 }

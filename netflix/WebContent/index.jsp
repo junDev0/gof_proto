@@ -6,7 +6,9 @@
 	<title>Browse</title>
 </head>
 <body>
+
 		
 	<a href="account.jsp">계정으로</a> 
+
 </body>
 </html>

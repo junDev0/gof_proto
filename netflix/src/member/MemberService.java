@@ -1,5 +1,8 @@
 package member;
 
+import global.CommonService;
+import payment.MemberPaymentCard;
+
 /**
  * @date   :2016. 7. 27.
  * @author :HyunWoo Lee
@@ -7,12 +10,14 @@ package member;
  * @story  :
 */
 
-public interface MemberService {
-	public MemberBean findByPk(String id);
+public interface MemberService extends CommonService{
+	public MemberBean findByPk(String email);
 	public int regist(MemberBean memBean);
-	public int update(MemberBean memBean);
+	public MemberBean login(String email, String password);
+	public int update(MemberPaymentCard pcmBean);
 	public int delete(MemberBean memBean);
-	public int addFavorite(String email,int serialNo);
-	public int delFavorite(String email,int serialNo);
-	
+	public int addBk(String email,int serialNo);
+	public int delBk(String email,int serialNo);
+	public int addFav (String email, String fav);
+	public int update(String updateInfo);
 }
