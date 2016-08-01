@@ -2,7 +2,7 @@ package member;
 
 public class MemberBean {
 	private String name,email,password,grade,phone
-				  ,regDate,birth,profImg,cardNum;
+				  ,regDate,birth,profImg,cardNum,fav;
 	private boolean isRcvEmail;
 	public String getName() {
 		return name;
@@ -64,4 +64,11 @@ public class MemberBean {
 	public void setRcvEmail(boolean isRcvEmail) {
 		this.isRcvEmail = isRcvEmail;
 	}
+	public String getFav() {
+		return fav;
+	}
+	public void setFav(String fav) {
+		this.fav = fav;
+	}
+	
 }

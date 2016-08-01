@@ -11,7 +11,8 @@ import global.CommonService;
 
 public interface PaymentService extends CommonService{
 	public PaymentBean findByPk(int paySeq);
-	public int insert(PaymentBean payBean);
-	public int updaet(PaymentBean payBean);
+	public boolean insert(MemberPaymentCard pcBean);
+	public int update(PaymentBean payBean);
 	public int delete(int paySeq);
+	public boolean checkCard(CardBean cardBean);
 }
