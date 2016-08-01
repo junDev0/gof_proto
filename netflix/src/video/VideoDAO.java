@@ -25,9 +25,9 @@ public class VideoDAO {
 
 	public int insert(VideoBean viBean) {
 		int result = 0;
-		
+		String sql ="";
 		try {
-			
+			pstmt = conn.prepareStatement(sql);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
